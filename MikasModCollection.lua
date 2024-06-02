@@ -2501,6 +2501,7 @@ function SMODS.INIT.MikasModCollection()
                     "每有一个字母{C:attention}“#2#”",
                     "给予{C:chips}+#1#{}筹码",
                     "本牌出现于商店时改变所需字母"
+                }
             },
             ability_name = "MMC Eye Chart",
             slug = "mmc_eye_chart",
