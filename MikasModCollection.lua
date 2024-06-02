@@ -667,11 +667,11 @@ end
 local decks = {
     evenStevenDeck = {
         loc = {
-            name = "Even Steven's Deck",
+            name = "奇数基叔的牌组",
             text = {
-                "Start run with only",
-                "{C:attention}even cards{} and",
-                "the {C:attention}Even Steven{} joker"
+                "开局时仅拥有",
+                "{C:attention}奇数点{}的扑克牌",
+                "和{C:attention}奇数基叔"
             }
         },
         name = "Even Steven's Deck",
@@ -685,11 +685,11 @@ local decks = {
     },
     oddToddDeck = {
         loc = {
-            name = "Odd Todd's Deck",
+            name = "偶数欧叔的牌组",
             text = {
-                "Start run with only",
-                "{C:attention}odd cards{} and",
-                "the {C:attention}Odd Todd{} joker"
+                "开局时仅拥有",
+                "{C:attention}偶数点{}的扑克牌",
+                "和{C:attention}偶数欧叔"
             }
         },
         name = "Odd Todd's Deck",
@@ -703,11 +703,11 @@ local decks = {
     },
     fibonacciDeck = {
         loc = {
-            name = "Fibonacci Deck",
+            name = "斐波那契牌组",
             text = {
-                "Start run with only",
-                "{C:attention}Fibonacci cards{} and",
-                "the {C:attention}Fibonacci{} joker"
+                "开局时仅拥有{C:attention}斐波那契",
+                "以及能够{C:attention}触发{}之的扑克牌",
+                "{C:inactive}（A、2、3、5、8）"
             }
         },
         name = "Fibonacci Deck",
@@ -721,11 +721,11 @@ local decks = {
     },
     primeDeck = {
         loc = {
-            name = "Prime Deck",
+            name = "黄金时段来一把",
             text = {
-                "Start run with",
-                "only {C:attention}prime cards{} and",
-                "the {C:attention}Prime Time{} joker"
+                "开局时仅拥有{C:attention}黄金时段",
+                "以及能够{C:attention}触发{}之的扑克牌",
+                "{C:inactive}（A、2、3、5、7）"
             }
         },
         name = "Prime Deck",
@@ -739,11 +739,10 @@ local decks = {
     },
     midasDeck = {
         loc = {
-            name = "Midas's Deck",
+            name = "迈达斯之牌",
             text = {
-                "Start run with only",
-                "{C:attention}Gold Face cards{} and",
-                "the {C:attention}Midas Mask{} joker"
+                "开局时仅拥有{C:attention}黄金人头牌",
+                "和{C:attention}迈达斯面具"
             }
         },
         name = "Midas's Deck",
@@ -757,12 +756,11 @@ local decks = {
     },
     jokersForHireDeck = {
         loc = {
-            name = "\"Jokers for Hire\" Deck",
+            name = "“外雇小丑”牌组",
             text = {
-                "All Jokers give {C:dark_edition}+1{}",
-                "Joker slot. Price of",
-                "{C:attention}Jokers{} and {C:attention}Buffoon Packs",
-                "{C:red}increases{} per Joker"
+                "所有小丑牌均给予{C:dark_edition}+1{}小丑牌槽位",
+                "每张小丑牌均会使{C:attention}小丑牌",
+                "和{C:attention}丑角包{}的价格{C:red}上涨"
             }
         },
         name = "Jokers for Hire",
@@ -776,13 +774,11 @@ local decks = {
     },
     perfectPrecisionDeck = {
         loc = {
-            name = "Perfect Precision Deck",
+            name = "百发百中牌组",
             text = {
-                "+1 {C:blue}hands{}, {C:red}discards{} and",
-                "{C:attention}hand size{}. Start with",
-                "a {C:dark_edition}negative {C:attention}The Sniper{}",
-                "Joker. Ante scales {C:attention}X1.5{}",
-                "as fast"
+                "{C:attention}手牌上限{}及{C:blue}出牌{}和{C:red}弃牌{}次数各+1",
+                "开局时即拥有{C:dark_edition}负片{C:attention}狙击手{}小丑牌",
+                "底注涨幅{C:attention}X1.5{}"
             }
         },
         name = "Perfect Precision",
@@ -2168,11 +2164,10 @@ function SMODS.INIT.MikasModCollection()
             loc = {
                 name = "狙击手",
                 text = {
-                    "Gains {X:mult,C:white}X#2#{} Mult when a",
-                    "blind is finished within {C:attention}#3#%{} of",
-                    "the {C:attention}exact{} chip requirement",
-                    "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
-                    "{C:inactive}Art by {C:green,E:1,S:1.1}Grassy"
+                    "以不超过{C:attention}最低要求{C:attention}#3#%",
+                    "的得分击败盲注时",
+                    "本牌获得{X:mult,C:white}X#2#{}倍率",
+                    "{C:inactive}（当前为{X:mult,C:white}X#1#{C:inactive}倍率）"
                 }
             },
             ability_name = "MMC The Sniper",
@@ -4543,7 +4538,7 @@ function SMODS.INIT.MikasModCollection()
                 text = {
                     "有{C:green}#2#/#1#{}的几率在购买卡牌时",
                     "{C:attention}额外{}获得一张同类型卡牌",
-                    "{C:inactive}（必须有空间）"
+                    "{C:inactive}（必须有空位）"
                 }
             },
             ability_name = "MMC Buy One Get One",
