@@ -3255,11 +3255,10 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local fishing_license = {
             loc = {
-                name = "Fishing License",
+                name = "垂钓执照",
                 text = {
-                    "{C:attention}Copies{} effects of all",
-                    "scored {C:attention}Enhanced{} cards",
-                    "{C:inactive}Art by {C:green,E:1,S:1.1}Grassy"
+                    "{C:attention}复制{}所有计分的",
+                    "{C:attention}增强{}卡牌的能力"
                 }
             },
             ability_name = "MMC Fishing License",
@@ -3770,11 +3769,9 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker,
         local harp_seal = {
             loc = {
-                name = "Harp Seal",
+                name = "竖琴海豹",
                 text = {
-                    "{C:attention}Doubles{} the effect",
-                    "of all {C:attention}Seals",
-                    "{C:inactive}Art by {C:green,E:1,S:1.1}Grassy"
+                    "所有{C:attention}蜡封{}的效果{C:attention}翻倍"
                 }
             },
             ability_name = "MMC Harp Seal",
