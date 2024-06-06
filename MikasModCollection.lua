@@ -2850,12 +2850,12 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local suit_alley = {
             loc = {
-                name = "Suit Alley",
+                name = "花花胡同",
                 text = {
-                    "{C:diamonds}Diamond{} and {C:clubs}Club{} cards",
-                    "gain {C:chips}+#1#{} Chips when scored",
-                    "{C:hearts}Heart{} and {C:spades}Spade{} cards",
-                    "gain {C:mult}+#2#{} Mult when scored"
+                    "{C:diamonds}方片{}、{C:clubs}梅花{}和{C:斧枪}斧枪{}牌",
+                    "在计分时给予{C:chips}+#1#{}筹码",
+                    "{C:hearts}红桃{}、{C:spades}黑桃{}和{C:印花}印花{}牌",
+                    "在计分时给予{C:mult}+#2#{}倍率"
                 }
             },
             ability_name = "MMC Suit Alley",
@@ -2887,11 +2887,11 @@ function SMODS.INIT.MikasModCollection()
             if context.cardarea == G.play and not context.repetition then
                 local mult = 0
                 local chips = 0
-                if context.other_card:is_suit("Diamonds") or context.other_card:is_suit("Clubs") then
+                if context.other_card:is_suit("Diamonds") or context.other_card:is_suit("Clubs") or context.other_card:is_suit("斧枪") then
                     -- Add chips if suit is Diamonds or Clubs
                     chips = self.ability.extra.chips
                 end
-                if context.other_card:is_suit("Hearts") or context.other_card:is_suit("Spades") then
+                if context.other_card:is_suit("Hearts") or context.other_card:is_suit("Spades") or context.other_card:is_suit("印花") then
                     -- Add mult if Hearts or Spades
                     mult = self.ability.extra.mult
                 end
