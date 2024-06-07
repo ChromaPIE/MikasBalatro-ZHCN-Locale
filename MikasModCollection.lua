@@ -2086,7 +2086,7 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local showoff = {
             loc = {
-                name = "浪荡B王",
+                name = "月度最佳小丑",
                 text = {
                     "以至少{C:attention}#3#{}倍于最低要求",
                     "的分数击败盲注时",
@@ -2564,7 +2564,7 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local grudgeful = {
             loc = {
-                name = "积怨小丑",
+                name = "昆虫标本",
                 text = {
                     "每回合第一次出牌计分前",
                     "以上一回合{C:attention}得分超额#2#%{}或以下的部分",
@@ -2759,14 +2759,13 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local historical = {
             loc = {
-                name = "Historical Joker",
+                name = "史书小丑",
                 text = {
-                    "If scored cards have the same",
-                    "{C:attention}ranks{} and {C:attention}order{} as previous",
-                    "hand, reduce blind requirement",
-                    "by previous hands {C:chips}Chips{}. Caps at",
-                    "{C:attention}#1#%{} of current blind's Chips",
-                    "{C:inactive}Art by {C:green,E:1,S:1.1}Grassy"
+                    "若计分牌的{C:attention}点数{}和{C:attention}顺序",
+                    "均与上一次出牌一致",
+                    "则以上次计得的{C:chips}筹码{}数",
+                    "削减盲注的得分要求",
+                    "至多削减最低得分要求的{C:attention}#1#%"
                 }
             },
             ability_name = "MMC Historical Joker",
@@ -2921,11 +2920,11 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local printer = {
             loc = {
-                name = "Test Print",
+                name = "试印页",
                 text = {
-                    "If hand scores more than",
-                    "blind's Chips, {C:attention}duplicate{}",
-                    "played cards"
+                    "若出牌得分",
+                    "大于盲注要求",
+                    "{C:attention}复制{}这手牌"
                 }
             },
             ability_name = "MMC The Printer",
@@ -3172,12 +3171,11 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local abbey_road = {
             loc = {
-                name = "Abbey Road",
+                name = "艾比路",
                 text = {
-                    "If at least {C:attention}#2#{} poker hands",
-                    "have been played the same",
-                    "amount of times, give {X:mult,C:white}X#1#{} Mult",
-                    "{C:inactive}Art by {C:green,E:1,S:1.1}Grassy"
+                    "若至少{C:attention}#2#{}种牌型",
+                    "具有相等的打出次数",
+                    "{X:mult,C:white}X#1#{}倍率"
                 }
             },
             ability_name = "MMC Abbey Road",
