@@ -948,8 +948,8 @@ function SMODS.INIT.MikasModCollection()
     G.localization.misc.dictionary.k_mmc_hand_down = "手牌上限减少！"
     G.localization.misc.dictionary.k_mmc_tick = "嘀嗒……"
     G.localization.misc.dictionary.k_mmc_plus_card = "Card!"
-    G.localization.misc.dictionary.k_mmc_luck = "+ Luck!"
-    G.localization.misc.dictionary.k_mmc_destroy = "Destroy!"
+    G.localization.misc.dictionary.k_mmc_luck = "好运来袭！"
+    G.localization.misc.dictionary.k_mmc_destroy = "摧毁！"
 
     init_localization()
 
@@ -2662,11 +2662,10 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local finishing_blow = {
             loc = {
-                name = "Finishing Blow",
+                name = "最后一击",
                 text = {
-                    "If a blind is finished",
-                    "with a {C:attention}High Card{}, randomly",
-                    "{C:attention}Enhance{} scored cards"
+                    "若致胜牌为{C:attention}高牌",
+                    "则给予计分牌随机的{C:attention}增强"
                 }
             },
             ability_name = "MMC Finishing Blow",
@@ -2728,11 +2727,10 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local aurora_borealis = {
             loc = {
-                name = "Aurora Borealis",
+                name = "北极光",
                 text = {
-                    "{C:attention}Blue Seals{} give an",
-                    "extra {C:dark_edition}negative {C:planet}Planet{} card",
-                    "{C:inactive}Art by {C:green,E:1,S:1.1}Grassy"
+                    "{C:attention}蓝色蜡封{}将额外给予",
+                    "一张{C:dark_edition}负片{C:planet}星球牌"
                 }
             },
             ability_name = "MMC Aurora Borealis",
@@ -4020,12 +4018,12 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local student_loans = {
             loc = {
-                name = "Student Loans",
+                name = "校园贷",
                 text = {
-                    "Go up to {C:red}-$#1#{} in debt",
-                    "Gives -#4# {C:red}discard{}",
-                    "for every {C:red}-$#2#{} in debt",
-                    "{C:inactive}(Currently {C:attention}#3#{C:inactive} discards)"
+                    "可负债{C:red}$#1#",
+                    "每负债{C:red}$#2#",
+                    "{C:red}弃牌次数{}-#4#",
+                    "{C:inactive}（当前可弃牌{C:attention}#3#{C:inactive}次）"
                 }
             },
             ability_name = "MMC Student Loans",
