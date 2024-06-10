@@ -3639,11 +3639,11 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker,
         local dagonet = {
             loc = {
-                name = "Dagonet",
+                name = "达戈内",
                 text = {
-                    "{C:attention}Doubles{} all base values",
-                    "on other Jokers",
-                    "{C:inactive}(If possible)"
+                    "使其他小丑牌的",
+                    "所有基础数值{C:attention}翻倍",
+                    "{C:inactive}（如果可能）"
                 }
             },
             ability_name = "MMC Dagonet",
@@ -4168,11 +4168,10 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local street_fighter = {
             loc = {
-                name = "Street Fighter",
+                name = "街头打手",
                 text = {
-                    "Gives {X:mult,C:white}X#1#{} Mult",
-                    "when balance is",
-                    "at or below {C:red}-$#2#"
+                    "负债至少{C:red}$#2#{}时",
+                    "给予{X:mult,C:white}X#1#{}倍率"
                 }
             },
             ability_name = "MMC Street Fighter",
@@ -4221,12 +4220,11 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local checklist = {
             loc = {
-                name = "Checklist",
+                name = "核对清单",
                 text = {
-                    "Playing {C:attention}#1#{} upgrades",
-                    "it by #2# level,",
-                    "poker hand changes",
-                    "at end of round"
+                    "打出{C:attention}#1#{}时",
+                    "将其牌型等级提升#2#",
+                    "每回合结束时改变需求牌型"
                 }
             },
             ability_name = "MMC Checklist",
@@ -4682,13 +4680,12 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local pack_a_punch = {
             loc = {
-                name = "Pack A Punch",
+                name = "重拳出击",
                 text = {
-                    "When {C:attention}Blind{} is selected,",
-                    "lose {C:money}$#1#{} and give the",
-                    "{C:attention}left-most{} Joker",
-                    "a random {C:attention}Edition",
-                    "{C:inactive}(Will replace current edition)"
+                    "选择{C:attention}盲注{}时，失去{C:money}$#1#",
+                    "并将随机一个{C:attention}版本",
+                    "给予{C:attention}最左侧{}的小丑牌",
+                    "{C:inactive}（会覆盖已有版本）"
                 }
             },
             ability_name = "MMC Pack A Punch",
@@ -4919,11 +4916,10 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local glass_cannon = {
             loc = {
-                name = "Glass Cannon",
+                name = "玻璃大炮",
                 text = {
-                    "{C:attention}Retrigger{} all {C:attention}Glass",
-                    "{C:attention}Cards{}, but they are",
-                    "{C:red}guaranteed{} to break"
+                    "{C:attention}重新触发{}所有{C:attention}玻璃牌",
+                    "但其在出牌计分后{C:red}必定{}破碎"
                 }
             },
             ability_name = "MMC Glass Cannon",
@@ -5006,12 +5002,11 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local scoring_test = {
             loc = {
-                name = "Scoring Test",
+                name = "几斤几两",
                 text = {
-                    "If played hand",
-                    "scores less than {C:attention}#1#%",
-                    "of blind requirement",
-                    "{C:red}destroy{} it"
+                    "若出牌的得分",
+                    "少于盲注最低要求的{C:attention}#1#%",
+                    "{C:red}摧毁{}这手牌"
                 }
             },
             ability_name = "MMC Scoring Test",
@@ -5085,12 +5080,11 @@ function SMODS.INIT.MikasModCollection()
         -- Create Joker
         local cicero = {
             loc = {
-                name = "Cicero",
+                name = "西塞罗",
                 text = {
-                    "Jokers that do not",
-                    "give {C:mult}Mult{}, {C:chips}Chips{} or",
-                    "{C:attention}retriggers{} will be",
-                    "{C:dark_edition}negative{} in the shop"
+                    "不含{C:mult}倍率{}及{C:chips}筹码加成",
+                    "或{C:attention}重新触发{}效果的小丑牌",
+                    "出现于商店时均将拥有{C:dark_edition}负片"
                 }
             },
             ability_name = "MMC Cicero",
