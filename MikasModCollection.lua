@@ -3171,8 +3171,9 @@ function SMODS.INIT.MikasModCollection()
             loc = {
                 name = "艾比路",
                 text = {
-                    "若至少{C:attention}#2#{}种牌型",
-                    "具有相等的打出次数",
+                    "若至少有{C:attention}#2#{}种牌型",
+                    "的打出次数相等",
+                    "{C:inactive}（不含0次）",
                     "{X:mult,C:white}X#1#{}倍率"
                 }
             },
