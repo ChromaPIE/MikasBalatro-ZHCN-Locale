@@ -40,7 +40,7 @@ local config = {
     cultistJoker = true,
     sealCollectorJoker = true,
     camperJoker = true,
-    scratchCardJoker = true,
+    scratchCardJoker = false, -- causing freeze in 1.0
     delayedJoker = true,
     showoffJoker = true,
     sniperJoker = true,
@@ -667,11 +667,11 @@ end
 local decks = {
     evenStevenDeck = {
         loc = {
-            name = "奇数基叔的牌组",
+            name = "偶数欧叔的牌组",
             text = {
                 "开局时仅拥有",
-                "{C:attention}奇数点{}的扑克牌",
-                "和{C:attention}奇数基叔"
+                "{C:attention}偶数点{}的扑克牌",
+                "和{C:attention}偶数欧叔"
             }
         },
         name = "Even Steven's Deck",
@@ -685,11 +685,11 @@ local decks = {
     },
     oddToddDeck = {
         loc = {
-            name = "偶数欧叔的牌组",
+            name = "奇数基叔的牌组",
             text = {
                 "开局时仅拥有",
-                "{C:attention}偶数点{}的扑克牌",
-                "和{C:attention}偶数欧叔"
+                "{C:attention}奇数点{}的扑克牌",
+                "和{C:attention}奇数基叔"
             }
         },
         name = "Odd Todd's Deck",
