@@ -4848,7 +4848,8 @@ function SMODS.INIT.MikasModCollection()
                 name = "收税员",
                 text = {
                     "依照每张小丑牌的{C:attention}稀有度",
-                    "在回合结束时给予{C:green}$#1#{}、{C:red}$#2#{}或{C:legendary}$#3#"
+                    "在回合结束时给予{C:green}$#1#{}、{C:red}$#2#{}或{C:legendary}$#3#",
+                    "{C:dark_edition}非原版{}小丑牌则给予{C:dark_edition}$#4#"
                 }
             },
             ability_name = "MMC Tax Collector",
@@ -4871,7 +4872,7 @@ function SMODS.INIT.MikasModCollection()
 
         -- Set local variables
         function SMODS.Jokers.j_mmc_tax_collector.loc_def(card)
-            return { card.ability.extra.dollars, card.ability.extra.dollars * 2, card.ability.extra.dollars * 4 }
+            return { card.ability.extra.dollars, card.ability.extra.dollars * 2, card.ability.extra.dollars * 4, card.ability.extra.dollars * 3 } -- uncommon - $1, rare - $2, leg - $4, other - $3
         end
 
         -- Calculate
@@ -4879,14 +4880,14 @@ function SMODS.INIT.MikasModCollection()
             if context.end_of_round and not context.individual and not context.repetition then
                 for _, v in ipairs(G.jokers.cards) do
                     -- Give dollars for every Joker, based on their rarity
-                    if v ~= self and v.config.center.rarity > 1 then
+                    if v ~= self and (type(v.config.center.rarity) == 'string' or (v.config.center.rarity > 1)) then
                         G.E_MANAGER:add_event(Event({
                             trigger = "after",
                             delay = 0.7,
                             func = (function()
                                 -- Give dollars
-                                local dollars = self.ability.extra.dollars * (v.config.center.rarity - 1)
-                                if v.config.center.rarity == 4 then
+                                local dollars = self.ability.extra.dollars * (((type(v.config.center.rarity) == 'string' and 4) or v.config.center.rarity) - 1)
+                                if v.config.center.rarity and v.config.center.rarity == 4 then
                                     dollars = dollars + 1
                                 end
                                 ease_dollars(dollars, true)
