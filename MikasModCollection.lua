@@ -2144,7 +2144,7 @@ function SMODS.INIT.MikasModCollection()
 
             -- See if total scored chips > 2 * blind chips, then increment xmult
             if context.end_of_round and not context.individual and not context.repetition and not context.blueprint then
-                if self.ability.extra.total_chips > (self.ability.extra.req * G.GAME.blind.chips) then
+                if Bigi(self.ability.extra.total_chips) > Bigi(self.ability.extra.req * G.GAME.blind.chips) then
                     self.ability.extra.current_Xmult = self.ability.extra.current_Xmult + self.ability.extra.Xmult_mod
 
                     card_eval_status_text(self, "extra", nil, nil, nil, {
@@ -2595,7 +2595,7 @@ function SMODS.INIT.MikasModCollection()
 
         -- Set local variables
         function SMODS.Jokers.j_mmc_grudgeful.loc_def(card)
-            return { card.ability.extra.current_chips, card.ability.extra.percentage }
+            return { number_format(card.ability.extra.current_chips), card.ability.extra.percentage }
         end
 
         -- Calculate
@@ -2607,12 +2607,12 @@ function SMODS.INIT.MikasModCollection()
 
             -- Apply chips
             if SMODS.end_calculate_context(context) then
-                if self.ability.extra.current_chips > 0 then
+                if Bigi(self.ability.extra.current_chips) > Bigi(0) then
                     card_eval_status_text(self, "extra", nil, nil, nil, {
                         message = localize {
                             type = "variable",
                             key = "a_chips",
-                            vars = { self.ability.extra.current_chips }
+                            vars = { number_format(self.ability.extra.current_chips) }
                         },
                         colour = G.C.CHIPS
                     })
@@ -2641,9 +2641,9 @@ function SMODS.INIT.MikasModCollection()
                 -- Add excess chips to bonus
                 if self.ability.extra.total_chips >= G.GAME.blind.chips then
                     self.ability.extra.current_chips = self.ability.extra.total_chips - G.GAME.blind.chips
-                    self.ability.extra.current_chips = math.ceil(math.min(G.GAME.blind.chips *
+                    self.ability.extra.current_chips = math.min(G.GAME.blind.chips *
                         self.ability.extra.percentage / 100,
-                        self.ability.extra.current_chips))
+                        self.ability.extra.current_chips):ceil()
                     -- Return message
                     card_eval_status_text(self, "extra", nil, nil, nil, {
                         message = localize {
@@ -3035,7 +3035,7 @@ function SMODS.INIT.MikasModCollection()
             -- Add xmult for every played card
             if context.individual and context.cardarea == G.play and not context.blueprint then
                 self.ability.extra.card_count = self.ability.extra.card_count + 1
-                if self.ability.extra.card_count >= 10 then
+                if self.ability.extra.card_count >= self.ability.extra.req then
                     self.ability.extra.card_count = 0
                     self.ability.extra.current_Xmult = self.ability.extra.current_Xmult + self.ability.extra.Xmult_mod
                     card_eval_status_text(self, "extra", nil, nil, nil, {
